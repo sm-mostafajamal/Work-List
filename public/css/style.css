@@ -1,0 +1,4 @@
+.completed {
+    text-decoration: line-through red 3px;
+    opacity: 0.6;
+}

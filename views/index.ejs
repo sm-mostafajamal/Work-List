@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Work Lists</title>
+</head>
+<body>
+    <h2>Incomplete Work Lists: 1</h2>
+
+    <ul class="task-lists">
+        <% for(let i = 0; i < info.length; i++){ %>
+        <li>
+            <% if(info[i].completed === true){ %>
+                <span class="taskText completed"><%= info[i].task %></span>
+                <button class="deleteBtn">Delete</button> 
+            <% } else {%>
+                <span class="taskText"><%= info[i].task %></span>
+                <button class="deleteBtn">Delete</button> 
+            <% } %>
+        </li>
+        <% } %>
+    </ul>
+    <form action="/postTaskAPI" method="POST">
+        <input type="text" name="task" class="task" placeholder="Add Task">
+        <button type="submit">Add</button>
+    </form>
+    
+    <script src="/js/main.js"></script>
+</body>
+</html>
