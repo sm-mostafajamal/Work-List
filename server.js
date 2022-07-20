@@ -24,7 +24,7 @@ app.use(express.json());
 
 app.get('/', (req, res) => {
     db.collection('work-lists').find().toArray()
-    .then(data => res.render('index.ejs', { info : data }))
+    .then(data => res.render('index.ejs', { info : data }) )
     .catch( err => console.error(err));
 });
 

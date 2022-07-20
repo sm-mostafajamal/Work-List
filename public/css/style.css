@@ -1,4 +1,32 @@
+body {
+    width: 30%;
+    margin: auto;
+}
+
 .completed {
     text-decoration: line-through red 3px;
     opacity: 0.6;
+}
+
+main > ul.task-lists {
+    text-align: left;
+}
+li {
+    display: flex;
+    justify-content: left;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.textArea {
+    display: inline;
+    width: 80%;
+    border: 1px black solid;
+    word-wrap: break-word;
+}
+.buttunArea {
+    margin: auto;
+}
+ol {
+    padding: 0;
 }

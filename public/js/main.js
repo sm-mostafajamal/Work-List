@@ -1,7 +1,7 @@
 const deleteBtn = document.querySelectorAll('.deleteBtn');
-const updateTaskText = document.querySelectorAll('.task-lists .taskText');
+const updateTaskText = document.querySelectorAll('.textArea');
 
-// console.log(updateTaskText)
+
 Array.from(deleteBtn).forEach(el => {
     el.addEventListener('click', deleteTask)
 })
@@ -11,8 +11,8 @@ Array.from(updateTaskText).forEach(el => {
 })
 
 async function deleteTask(){
-    const task = this.parentNode.childNodes[1].innerText;
-    
+    const task = this.parentNode.previousSibling.previousElementSibling.innerText;
+    console.log(task)
     try {
         const response = await fetch('/deleteTaskAPI', {
             method : 'delete',
@@ -30,7 +30,7 @@ async function deleteTask(){
 
 async function updateTask(){
     const task = this.innerText;
-    const completion = this.classList[1]
+    const completion = this.firstElementChild.classList[1];
     if(completion == 'completed'){
         try {
             const response = await fetch('/unmarkAPI', {
