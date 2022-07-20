@@ -7,7 +7,8 @@ const cors = require('cors');
 
 let db,
     dbName = 'Work-List',
-    PORT = process.env.PORT || 8000,
+    // PORT = process.env.PORT || 8000,
+    PORT = 8000,
     dbConnectionStr = process.env.DB_STRING;
 
 // Database connection
@@ -82,4 +83,4 @@ app.delete('/deleteTaskAPI', (req, res) => {
     })
 });
 // listening port
-app.listen(PORT, () => console.log(`Server is running on ${PORT}`));
+app.listen(process.env.PORT || PORT, () => console.log(`Server is running on ${PORT}`));
