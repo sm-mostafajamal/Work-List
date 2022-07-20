@@ -83,4 +83,4 @@ app.delete('/deleteTaskAPI', (req, res) => {
     })
 });
 // listening port
-app.listen(process.env.PORT || 5000, () => console.log(`Server is running on ${PORT}`));
+app.listen(process.env.PORT || 5000, () => console.log(`Server is running`));
