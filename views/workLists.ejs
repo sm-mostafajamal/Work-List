@@ -3,19 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../public/css/style.css">
+    <link rel="stylesheet" href="css/style.css">
     <title>Work Lists</title>
 </head>
 <body>
     <header id="heading">
-
         <h1 id="title">Work Lists</h1>
-
         <p id="description">Add Your Tasks</p>
     </header>
-    <section id="task-form">
-        
-        <ol type="1" class="task-lists">
+
+    <main id="task-form">
+        <!-- <ol type="1" class="task-lists">
             <li>
 
                 <section class="textArea">
@@ -25,21 +23,18 @@
                     <button class="deleteBtn">Delete</button> 
                 </section>   
             </li>
-        </ol>
+        </ol> -->
 
-        <form action="#" >
-
+        <form action="workLists/createTask" method="POST">
             <section class="task-content">
-
-                <input type="text" name="task" class="task-input" id="name" placeholder="Type here" required title="Type here"/>
+                <input type="text" name="taskInput" class="task-input" placeholder="Type here" required title="Type here"/>
             </section> 
-            
             <section>
-
-                <input type="submit" id="submit" value="Submit"> 
+                <button type="submit" id="submit">Add</button>
             </section>
         </form>
-    </section>
+    </main>
+    <script src="js/main.js"></script>
 
 </body>
 </html>

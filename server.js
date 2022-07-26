@@ -15,7 +15,7 @@ app.use(express.json());
 
 // Pages
 app.use('/', homeRoutes);
-app.use('/', workListsRoutes);
+app.use('/workLists', workListsRoutes);
 
 
 // listening

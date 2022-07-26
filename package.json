@@ -4,8 +4,8 @@
   "description": "chechout on live server: https://work-list-heroku.herokuapp.com/",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "devStart": "NODE_MODE=development nodemon server.js",
+    "start": "NODE_MODE=production node server.js"
   },
   "repository": {
     "type": "git",
@@ -24,5 +24,8 @@
     "express": "^4.18.1",
     "mongodb": "^4.8.0",
     "mongoose": "^6.4.7"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.19"
   }
 }
