@@ -14,16 +14,9 @@ body {
     font-family: 'Poppins', sans-serif;
     position:relative;
     margin: auto;
-    height: 1000px;
-
+    height: 100vh;
 }
 
-/*  */
-
-/* body {
-    width: 30%;
-    margin: auto;
-} */
 .workListItems{
     border: 1px solid silver;
 }
@@ -66,7 +59,10 @@ button.deleteBtn {
         height: 1.5rem;
         font-size: 0.8rem;
 }
-
+h1#title-homepage{
+    margin: 0;
+    padding-top: 20%;
+}
 #description {
     font-style: italic;
 }
@@ -83,7 +79,8 @@ button.deleteBtn {
 }
 #title{
     font-weight: 400;
-    margin: 40px auto 0px auto;
+    margin: 0 auto 0px auto;
+    padding-top: 100px;
 }
 #description{
     font-size: 1.1rem;
@@ -113,7 +110,9 @@ select {
 p {
     margin: 10px 0;
 }
-
+#pageLink {
+    text-align: center;
+}
 #submit, .deleteBtn {
     width: 100%;
     height: 3rem;
