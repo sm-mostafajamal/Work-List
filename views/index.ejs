@@ -2,49 +2,44 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="style.css">
     <title>Work Lists</title>
 </head>
 <body>
-    <header>
-        <h1 id="">Your Today's WorkLists</h1>
+    <header id="heading">
+
+        <h1 id="title">Work Lists</h1>
+
+        <p id="description">Add Your Tasks</p>
     </header>
-    <main>
+    <section id="task-form">
+        
         <ol type="1" class="task-lists">
-            <% let count = 0 %>
-            <% for(let i = 0; i < info.length; i++){ %>
             <li>
-                <% if(info[i].completed === true){ %>
-                    <section class="textArea">
-                        <span class="taskText completed"><%= info[i].task %></span>
-                    </section>
-                    <section class="buttunArea">
-                        <button class="deleteBtn">Delete</button> 
-                    </section>   
-                <% } else {%>
-                    <section class="textArea">
-                        <span class="taskText"><%= info[i].task %></span>
-                    </section>
-                    <section class="buttunArea">
-                        <button class="deleteBtn">Delete</button> 
-                    </section> 
-                    <% count++ %>
-                <% } %>
+
+                <section class="textArea">
+                    <span class="taskText completed">testing forms</span>
+                </section>
+                <section class="buttunArea">
+                    <button class="deleteBtn">Delete</button> 
+                </section>   
             </li>
-            <% } %>
         </ol>
-        <form action="/postTaskAPI" method="POST">
-            <input type="text" name="task" class="task" placeholder="Add Task">
-            <button type="submit">Add</button>
+
+        <form action="#" >
+
+            <section class="task-content">
+
+                <input type="text" name="task" class="task-input" id="name" placeholder="Type here" required title="Type here"/>
+            </section> 
+            
+            <section>
+
+                <input type="submit" id="submit" value="Submit"> 
+            </section>
         </form>
-    </main>
-    <footer>
-        <h2>Incomplete: <span id="count_incompleted_task"><%= count %> </span> !</h2>
-    </footer>
-    
-    
-    <script src="/js/main.js"></script>
+    </section>
+
 </body>
 </html>
