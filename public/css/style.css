@@ -6,7 +6,7 @@ body {
         rgba(58, 58, 158, 0.8),
         rgba(136, 136, 206, 0.7)
       ),
-    url(images/background.jpeg);
+    url(../../images/background.jpeg);
     background-repeat: no-repeat;
     color: white;
     background-size:cover;
