@@ -6,7 +6,7 @@ body {
         rgba(58, 58, 158, 0.8),
         rgba(136, 136, 206, 0.7)
       ),
-    url(../../images/background.jpeg);
+    url(images/background.jpeg);
     background-repeat: no-repeat;
     color: white;
     background-size:cover;
@@ -24,11 +24,13 @@ body {
     width: 30%;
     margin: auto;
 } */
-
-/* .completed {
+.workListItems{
+    border: 1px solid silver;
+}
+.completed {
     text-decoration: line-through red 3px;
     opacity: 0.6;
-} */
+}
 
 #task-form > ol.task-lists {
     text-align: left;
@@ -47,13 +49,19 @@ li {
     word-wrap: break-word;
 }
 .buttunArea {
+    width: 20%;
     margin: auto;
 }
 ol {
     padding: 0;
 }
-
+.taskText {
+    margin-left: 20px;
+}
 /*  */
+#leftItems {
+    font-size: 1.5rem;
+}
 button.deleteBtn {
         height: 1.5rem;
         font-size: 0.8rem;
