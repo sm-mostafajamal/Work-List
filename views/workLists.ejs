@@ -9,21 +9,24 @@
 <body>
     <header id="heading">
         <h1 id="title">Work Lists</h1>
-        <p id="description">Add Your Tasks</p>
+        <p id="description">Things Left to do: <strong id="leftItems"> <%= left %> </strong> </p>
     </header>
 
     <main id="task-form">
-        <!-- <ol type="1" class="task-lists">
-            <li>
-
+        <ol type="1" class="task-lists">
+            <% tasks.forEach( el =>{ %>
+            <li class="workListItems" data-id="<%= el._id %>">
                 <section class="textArea">
-                    <span class="taskText completed">testing forms</span>
+                    <span class="taskText <%= el.completed === true ? 'completed' : 'uncompleted'%>">
+                        <%= el.task %>
+                    </span>
                 </section>
                 <section class="buttunArea">
                     <button class="deleteBtn">Delete</button> 
                 </section>   
             </li>
-        </ol> -->
+            <% }) %>
+        </ol>
 
         <form action="workLists/createTask" method="POST">
             <section class="task-content">
@@ -35,6 +38,5 @@
         </form>
     </main>
     <script src="js/main.js"></script>
-
 </body>
 </html>
